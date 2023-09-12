@@ -1,0 +1,21 @@
+# a program that calulates the number of number plates from KAA001 to KZZ999
+import random
+import string
+
+
+def plates_numbers():
+    plates = []
+    start = 'K'
+    for letter2 in string.ascii_uppercase:
+        for letter3 in string.ascii_uppercase:
+            for number1 in range(1, 11):
+                for number2 in range(1, 11):
+                    for number3 in range(1, 11):
+                        for letter4 in string.ascii_uppercase:
+                            plate = f'{start}{letter2}{letter3}{number1}{number2}{number3}{letter4}'
+                            plates.append(plate)
+    return plates
+
+
+Plates = plates_numbers()
+print(len(Plates))
